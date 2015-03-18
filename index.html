@@ -36,8 +36,8 @@
 	<body onload="initialize()">
 		<div id="map-canvas"></div>
 		<div class="input">
-			<input id="address"  type="textbox" value="Redwood City, CA">
-			<input id="place"  type="textbox" value="Chinese Restaurant">
+			<input id="address"  type="textbox" value="Redwood City, CA" onKeyPress="{if (event.keyCode==13)codeAddress()}">
+			<input id="place"  type="textbox" value="Chinese Restaurant" onKeyPress="{if (event.keyCode==13)codeAddress()}">
 			<button class="button" onclick="codeAddress()">Find</button>
 		</div>
 	</body>
