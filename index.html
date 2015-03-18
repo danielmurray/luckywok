@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+		.input{
+			position: absolute;
+			bottom: 50px;
+			left: 50px;
+		}
+		.input #address,
+		.input #place{
+			height: 30px;
+			width: 300px;
+			font-size: 20px;
+		}
+		.input .button{
+			height: 35px;
+			width: 90px;
+			font-size: 20px;
+			background-color: black;
+			color: white;
+			float: right;
+			margin-left: 20px;
+			cursor: pointer;
+			padding-top: 5px;
+			text-align: center;
+		}
+		</style>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv6FoxBuRSF4tfKOZplvzpIxX48LzQ8cY&libraries=visualization,places&v=3.exp&signed_in=true">
+		</script>
+    
+		<script type="text/javascript" src="app.js">
+		</script>
+	</head>
+	<body onload="initialize()">
+		<div id="map-canvas"></div>
+		<div class="input">
+			<input id="address"  type="textbox" value="Redwood City, CA" onKeyPress="{if (event.keyCode==13)codeAddress()}">
+			<input id="place"  type="textbox" value="Chinese Restaurant" onKeyPress="{if (event.keyCode==13)codeAddress()}">
+			<button class="button" onclick="codeAddress()">Find</button>
+		</div>
+	</body>
+</html>
